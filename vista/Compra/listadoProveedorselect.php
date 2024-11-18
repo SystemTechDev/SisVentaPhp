@@ -1,5 +1,5 @@
 <?php 
-require_once("../modelo/clsProveedor.php");
+require_once("../../modelo/clsProveedor.php");
 $nombre = $_GET['nombre'];
 $nombre="%".str_replace(' ','%',$nombre)."%";
 $objproveedor = new clsProveedor();

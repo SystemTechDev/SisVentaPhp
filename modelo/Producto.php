@@ -140,7 +140,7 @@ class Producto{
 
     function consultarStockProductoById($idproducto)
     {
-        $sql = "SELECT idproducto,fecha,tipo,cantidad,stockanterior,stockactual,estado FROM kardex WHERE idproducto = :idproducto ORDER BY idproducto DESC LIMIT 1";
+        $sql = "SELECT producto_id,fecha,tipo,cantidad,stockanterior,stockactual,estado FROM kardex WHERE producto_id = :idproducto ORDER BY producto_id DESC LIMIT 1";
         global $cnx;
         $parametros = array(":idproducto"=>$idproducto);
         $pre = $cnx->prepare($sql);

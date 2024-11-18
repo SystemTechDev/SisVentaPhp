@@ -28,13 +28,13 @@
 <script type="text/javascript">
   function buscarProveedor() {
     let nombreproveedor = $("#busquedanombreproveedor").val();
-    cargar('divListadoProveedor','vista/listadoProveedorselect.php?nombre='+nombreproveedor);
+    cargar('divListadoProveedor','vista/Compra/listadoProveedorselect.php?nombre='+nombreproveedor);
   }
 
   function nuevoProveedor() {
     //$("#divMantProveedor").show();
     //cargar('divMantProveedor','presentacion/mantProveedor.php?accion=REGISTRAR');
-    ViewModal('vista/mantProveedor.php?accion=REGISTRAR','divModalMediano','Registro de Nuevo Proveedor');
+    ViewModal('vista/Compra/mantProveedor.php?accion=REGISTRAR','divModalMediano','Registro de Nuevo Proveedor');
   }
 
   function guardarProveedor() {

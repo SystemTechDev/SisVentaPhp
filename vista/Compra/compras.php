@@ -237,6 +237,7 @@ $accion = "REGISTRAR";
                                 if($dato['estado']=='A'){
                                   $class="text-red";
                                 }
+                                
                                 $datastock = $objproducto->consultarStockProductoById($dato['idproducto']);
                                 $datostock = $datastock->fetch(PDO::FETCH_NAMED);
                                 if ($datostock['stockactual'] ?? null) {
@@ -344,11 +345,11 @@ $accion = "REGISTRAR";
     });
 
   function listarproveedores() {
-    ViewModal('vista/adminProveedorselect.php?accion=REGISTRAR','divlibre','Seleccionar Proveedor');
+    ViewModal('vista/Compra/adminProveedorselect.php?accion=REGISTRAR','divlibre','Seleccionar Proveedor');
   }
 
   function listarproductos() {
-    ViewModal('vista/adminProductoselect.php?accion=REGISTRAR','divlibre','Seleccionar Producto');
+    ViewModal('vista/Compra/adminProductoselect.php?accion=REGISTRAR','divlibre','Seleccionar Producto');
   }
 
   function obtenerSeriescompra(idtipocomprobante=0){
